@@ -254,4 +254,17 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5861763506767790290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6066179149663344050, guid: f3b456ab84642cc4e838ab285409867c,
+          type: 3}
+        m_TargetAssemblyTypeName: Main.ComponentsController, Assembly-CSharp
+        m_MethodName: OnComponentButtonPress
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
