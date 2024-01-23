@@ -9,7 +9,7 @@ public class AnimationStateController : MonoBehaviour
 {
     [SerializeField] private ComponentsController _componentsController;
     private Animator targetAnimator;
-    private const float normalizedTransitionDuration = 1f;
+    private const float normalizedTransitionDuration = 0f;
 
     private void Awake()
     {

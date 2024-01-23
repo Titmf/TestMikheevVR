@@ -7,12 +7,12 @@ namespace UI
     {
         public void OpenGameScene()
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Main");
         }
     
         public void OpenMenuScene()
         {
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("Menu");
         }
     }
 }

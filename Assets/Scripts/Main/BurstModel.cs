@@ -20,6 +20,9 @@ public class BurstModel : MonoBehaviour
     private const float _offsetX = -50f;
     private const float TimeToMove = 1f;
     
+    public delegate void Bursted (bool state);
+    public event Bursted ThenBursted;
+    
     private void Awake()
     {
         GetComponentsTransforms();
@@ -61,7 +64,7 @@ public class BurstModel : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveComponentCoroutine(int index, int multiple)
+    private IEnumerator MoveComponentCoroutine(int index, int multiple, Action onCoroutineFinished = null)
     {
         float timeElapsed = 0;
         Vector3 startPosition = _componentsStartTransforms[index].position;
@@ -78,6 +81,12 @@ public class BurstModel : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+        if (onCoroutineFinished != null)
+        {
+            onCoroutineFinished.Invoke();
+        }
+        
+        ThenBursted?.Invoke(true);
     }
 
     private void OnDestroy()
